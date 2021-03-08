@@ -1,10 +1,9 @@
 # Scheduler
 
 ## Links
-[https://emacartoon.github.io/Scheduler/
-]https://emacartoon.github.io/Scheduler/
+https://emacartoon.github.io/Scheduler/
 
-[https://github.com/emacartoon/Scheduler]https://github.com/emacartoon/Scheduler
+https://github.com/emacartoon/Scheduler
 
 ## My Task
 Create a simple daily planner application that allows a user to schedule hourly events by modifying starter code.

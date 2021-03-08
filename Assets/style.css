@@ -21,11 +21,13 @@ body {
 
 textarea{
   background: transparent;
-  border: none;
   resize: none;
   color: var(--dkgrey);
-  border: 1px dashed var(--grey);
+  border-top: 1px dashed var(--grey);
+  border-left: 1px dashed var(--grey);
+  border-right: 1px dashed var(--grey);
   padding: 10px;
+  border-bottom: none;
 }
 
 .jumbotron {
@@ -83,4 +85,18 @@ textarea{
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+#sortable {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+}
+#sortable li {
+  margin: 0 3px 3px 3px;
+  padding: 0.4em;
+  padding-left: 1.5em;
+  font-size: 1.4em;
+  height: 18px;
 }
