@@ -11,17 +11,27 @@ Create a simple daily planner application that allows a user to schedule hourly 
 ## Technology Used
 Browser run and features dynamically updated HTML and CSS powered by jQuery and the Moment.js library.
 
-Acceptance Criteria
-GIVEN I am using a daily planner to create a schedule
+## Acceptance Criteria
+I am using a daily planner to create a schedule
 WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
+[x] THEN the current day is displayed at the top of the calendar
 WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
+[x] THEN I am presented with timeblocks for standard business hours
 WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
+[x] THEN each timeblock is color coded to indicate whether it is in the past, present, or future
 WHEN I click into a timeblock
-THEN I can enter an event
+[x] THEN I can enter an event
 WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
+[x] THEN the text for that event is saved in local storage
 WHEN I refresh the page
-THEN the saved events persist
+[x] THEN the saved events persist
+
+## Mockups & Screen Shots
+[!./Assets/imgs/Mockup_Styles.png]
+Mockup with styles selected
+
+[!./Assets/imgs/Function_Screenshot.png]
+Screenshot of working function at 8:54pm
+
+## Sources
+JavaScript Function discussions with Kate Biernat, Dylan Korte, Brad Tomlinson, Scott Ray, and Noor Abdikadir.

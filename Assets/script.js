@@ -59,12 +59,12 @@ function whatTimeIsIt(){
         
         // set var to change color depending on the hour of day
         if (parseInt(currentHour) > parseInt(timeSlotHour)){
-            $(this).parent().addClass("past");
+            $(this).addClass("past");
             }
             else if (currentHour === timeSlotHour) {
-                $(this).parent().addClass("present");
+                $(this).addClass("present");
             } else {
-                $(this).parent().addClass("future");
+                $(this).addClass("future");
             }
         }
     );
