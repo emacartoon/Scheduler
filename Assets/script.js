@@ -22,7 +22,7 @@ $(".saveBtn").on("click", function (e) {
   var time = $(this).parent().attr("id");
   // Set description as this button's sibling div class's contents
   var description = $(this).siblings(".description").val();
-  // Make string of text
+  // Make string of text and store it in localStorage
   JSON.stringify(localStorage.setItem(time, description));
 });
 
@@ -30,7 +30,7 @@ $(".saveBtn").on("click", function (e) {
 renderDescription();
 
 function renderDescription() {
-  // Timeblocks 07:00 - 17:00 Pull from localStorage and show
+  // Timeblocks 07:00 - 17:00 Pull from localStorage and show the string associated with that string id, which matches their div id
   $("#hour-0700 textarea").val(localStorage.getItem("hour-0700"));
   $("#hour-0800 textarea").val(localStorage.getItem("hour-0800"));
   $("#hour-0900 textarea").val(localStorage.getItem("hour-0900"));
@@ -45,28 +45,26 @@ function renderDescription() {
 }
 
 // Time Check function to change colours
+function whatTimeIsIt() {
+  // Run this loop on all divs with the class "description"
+  $(".description").each(function () {
+    // Pulling the Hour from each id name
+    var timeSlotHour = $(this).parent().attr("id").split("-")[1];
+    console.log(timeSlotHour);
 
-function whatTimeIsIt(){
-    // Run this loop on all divs with the class "description"
-    $(".description").each(function(){
-        // Pulling the Hour from each id name
-        var timeSlotHour = $(this).parent().attr("id").split("-")[1];
-        console.log(timeSlotHour);
+    // Pulling Current Time with Moment.js
+    var currentHour = moment().format("HH" + "00");
+    console.log(currentHour);
 
-        // Pulling Current Time
-        var currentHour = moment().format("HH"+"00");
-        console.log(currentHour);
-        
-        // set var to change color depending on the hour of day
-        if (parseInt(currentHour) > parseInt(timeSlotHour)){
-            $(this).addClass("past");
-            }
-            else if (currentHour === timeSlotHour) {
-                $(this).addClass("present");
-            } else {
-                $(this).addClass("future");
-            }
-        }
-    );
+    // set var to change color depending on the hour of day
+    if (parseInt(currentHour) > parseInt(timeSlotHour)) {
+      $(this).addClass("past");
+    } else if (currentHour === timeSlotHour) {
+      $(this).addClass("present");
+    } else {
+      $(this).addClass("future");
+    }
+  });
 }
-    whatTimeIsIt();
+// Make the function happens
+whatTimeIsIt();
