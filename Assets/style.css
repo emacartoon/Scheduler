@@ -5,6 +5,7 @@
   --penk: #dc9ce4;
   --bloo: #b7c8f9;
   --teel: #acebd1;
+  --halfgrey: rgba(70,70,70,.5)
 }
 
 body {
@@ -76,8 +77,8 @@ textarea{
 }
 
 .past {
-  background-color: var(--grey);
-  color: var(--grey);
+  background-color: var(--halfgrey);
+  color: var(--dkgrey);
 }
 
 .present {

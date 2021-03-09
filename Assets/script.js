@@ -26,7 +26,7 @@ $(".saveBtn").on("click", function (e) {
   JSON.stringify(localStorage.setItem(time, description));
 });
 
-//  Make it so Number 1!
+//  Make it so, Number 1!
 renderDescription();
 
 function renderDescription() {
@@ -59,12 +59,12 @@ function whatTimeIsIt(){
         
         // set var to change color depending on the hour of day
         if (parseInt(currentHour) > parseInt(timeSlotHour)){
-            $(this).addClass("past");
+            $(this).parent().addClass("past");
             }
             else if (currentHour === timeSlotHour) {
-                $timeBlock.addClass("present");
+                $(this).parent().addClass("present");
             } else {
-                $timeBlock.addClass("future");
+                $(this).parent().addClass("future");
             }
         }
     );
