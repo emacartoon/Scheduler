@@ -11,6 +11,9 @@ console.log(moment().format("MMMM Do YYYY, HH:mm:ss"));
 // Define description class
 var description = document.getElementsByClassName(".description");
 
+// Define $timeBlock
+var $timeBlock = document.getElementsByClassName(".time-block");
+
 // Save button -> Store the Time + Description in localStorage
 $(".saveBtn").on("click", function (e) {
   // No refreshy
@@ -41,7 +44,29 @@ function renderDescription() {
   $("#hour-1700 textarea").val(localStorage.getItem("hour-1700"));
 }
 
-// set var to change color depending on the hour of day
-var currentHour = moment().format("HHmm");
-console.log(currentHour);
+// Time Check function to change colours
 
+function whatTimeIsIt(){
+    // Run this loop on all divs with the class "description"
+    $(".description").each(function(){
+        // Pulling the Hour from each id name
+        var timeSlotHour = $(this).parent().attr("id").split("-")[1];
+        console.log(timeSlotHour);
+
+        // Pulling Current Time
+        var currentHour = moment().format("HH"+"00");
+        console.log(currentHour);
+        
+        // set var to change color depending on the hour of day
+        if (parseInt(currentHour) > parseInt(timeSlotHour)){
+            $(this).addClass("past");
+            }
+            else if (currentHour === timeSlotHour) {
+                $timeBlock.addClass("present");
+            } else {
+                $timeBlock.addClass("future");
+            }
+        }
+    );
+}
+    whatTimeIsIt();
