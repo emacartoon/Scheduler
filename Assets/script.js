@@ -1,93 +1,47 @@
-var date = moment().format("dddd, MMMM Do YYYY, HHmm");
-var currentDay = document.getElementById("currentDay"); currentDay.textContent=date;
-
-var $timeBlock = $("#time-block");
-var time = [$(".hour").text()];
-console.log(time);
-var hour = parseInt[time];
-for (let i = 0; i < 11; i++) {
-    $timeBlock.append(buildTimeBlock)
-}
+// Setting the current date and time in the header bar
+var date = moment().format("MMMM Do YYYY, HH:mm");
 
 // Open Planner, display today's date
+var $currentDay = document.getElementById("currentDay");
+$currentDay.textContent = date;
 
-// Generate timeblocks 7:00 - 17:00
+// In case I want the seconds later for my last refresh
+console.log(moment().format("MMMM Do YYYY, HH:mm:ss"));
 
-// set var to change color depending on the hour of day
-var currentHour = (moment().format("HH"));
-console.log(currentHour);
+// Define description class
+var description = document.getElementsByClassName(".description");
 
-function buildTimeBlock(hour){
-    var background;
-    if(currentHour === hour){
-        $timeBlock.addClass("now");
-    } else if(currentHour < hour) {
-        $timeBlock.addClass("last");
-    } else {
-        $timeBlock.addClass("almost");
-    }
-};
-
-
-
-// Past time slots turns 50%a --grey
-
-// Current time slot turns 50%a --bloo
-
-// Future slots are 50%a --teel
-
-// Times are --teel
-
-// Save Changes --penk
-
-// When click timeblock, can enter event
-
-
-
-// 
-var saveBtn = $(".saveBtn");
-
-// Press Confirm Changes to save to localStorage
-
-saveBtn.addEventListener("click", function(event){
-    // No refreshy
-    event.preventDefault();
-    //  Sets description variable for the time slot
-    var description = $(this).siblings(".description").val()
-
-
-
-})
-// document.querySelector("bytton").addEventListener("click", function (e){
-// localStorage.setItem("0700", slot0700)
-//});
-
-
-//When page refeshes, saved events persist
-
-// target by id "hour-0700"+ and class "description", set the value of that area after grabbing from localStorage
-
-$(".time-block").each(function(){
-    // get id
-    var id = $(this).attr("id");
-
-    // Retrive data
-    var storedDescription = localStorage.getItem(id);
-
-    $(this).children("textarea").val(storedDescription);
-
-    // How to pull hour
-    var timeSlotHour = parseInt(id.replace("hour-", ""));
-    console.log(timeSlotHour);
-
-    console.log(id);
+// Save button -> Store the Time + Description in localStorage
+$(".saveBtn").on("click", function (e) {
+  // No refreshy
+  e.preventDefault();
+  // Set time as this button's parent div id's contents which is named after the hour
+  var time = $(this).parent().attr("id");
+  // Set description as this button's sibling div class's contents
+  var description = $(this).siblings(".description").val();
+  // Make string of text
+  JSON.stringify(localStorage.setItem(time, description));
 });
 
-$(".saveBtn").on("Click", function (){
-    var id = $(this).parent().attr("id");
-    var description = $(this).siblings("textarea").val();
-    localStorage.setItem(id, description);
-    // console.log(description);
-    // console.log(id);
+//  Make it so Number 1!
+renderDescription();
 
-})
+function renderDescription() {
+  // Timeblocks 07:00 - 17:00 Pull from localStorage and show
+  $("#hour-0700 textarea").val(localStorage.getItem("hour-0700"));
+  $("#hour-0800 textarea").val(localStorage.getItem("hour-0800"));
+  $("#hour-0900 textarea").val(localStorage.getItem("hour-0900"));
+  $("#hour-1000 textarea").val(localStorage.getItem("hour-1000"));
+  $("#hour-1100 textarea").val(localStorage.getItem("hour-1100"));
+  $("#hour-1200 textarea").val(localStorage.getItem("hour-1200"));
+  $("#hour-1300 textarea").val(localStorage.getItem("hour-1300"));
+  $("#hour-1400 textarea").val(localStorage.getItem("hour-1400"));
+  $("#hour-1500 textarea").val(localStorage.getItem("hour-1500"));
+  $("#hour-1600 textarea").val(localStorage.getItem("hour-1600"));
+  $("#hour-1700 textarea").val(localStorage.getItem("hour-1700"));
+}
+
+// set var to change color depending on the hour of day
+var currentHour = moment().format("HHmm");
+console.log(currentHour);
+

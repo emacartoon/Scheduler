@@ -34,12 +34,11 @@
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Day Planner</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p class="lead">A simple scheduling calendar app</p>
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="container">
         <div id="hour-0700" class="row time-block">
           <div class="col-md-1 hour">
             07:00
@@ -48,8 +47,7 @@
           </textarea>
           <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
-      </div>
-      <div class="container">
+
         <div id="hour-0800" class="row time-block">
           <div class="col-md-1 hour">
             08:00
@@ -58,8 +56,7 @@
           </textarea>
           <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
-      </div>
-      <div class="container">
+
         <div id="hour-0900" class="row time-block">
           <div class="col-md-1 hour">
             09:00
@@ -68,8 +65,7 @@
           </textarea>
           <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
-      </div>
-      <div class="container">
+
         <div id="hour-1000" class="row time-block">
           <div class="col-md-1 hour">
             10:00
@@ -78,8 +74,7 @@
           </textarea>
           <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
-      </div>
-      <div class="container">
+
         <div id="hour-1100" class="row time-block">
           <div class="col-md-1 hour">
             11:00
@@ -88,8 +83,7 @@
           </textarea>
           <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
-      </div>
-      <div class="container">
+
         <div id="hour-1200" class="row time-block">
           <div class="col-md-1 hour">
             12:00
@@ -98,8 +92,7 @@
           </textarea>
           <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
-      </div>
-      <div class="container">
+
         <div id="hour-1300" class="row time-block">
           <div class="col-md-1 hour">
             13:00
@@ -108,8 +101,7 @@
           </textarea>
           <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
-      </div>
-      <div class="container">
+
         <div id="hour-1400" class="row time-block">
           <div class="col-md-1 hour">
             14:00
@@ -118,8 +110,7 @@
           </textarea>
           <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
-      </div>
-      <div class="container">
+
         <div id="hour-1500" class="row time-block">
           <div class="col-md-1 hour">
             15:00
@@ -128,8 +119,7 @@
           </textarea>
           <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
-      </div>
-      <div class="container">
+
         <div id="hour-1600" class="row time-block">
           <div class="col-md-1 hour">
             16:00
@@ -138,8 +128,7 @@
           </textarea>
           <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
-      </div>
-      <div class="container">
+
         <div id="hour-1700" class="row time-block">
           <div class="col-md-1 hour">
             17:00
@@ -148,28 +137,26 @@
           </textarea>
           <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
         </div>
-      </div>
       
     </div>
-    <!-- My Script -->
-    <script type="text/javascript"
-    src="./Assets/script.js"></script>
+    <footer>
+      <div>
+          <p>&copy; 2021 Emily "Emma" Lysyk</p>
+      </div>
+  </footer>
     <!-- jQuery Minimal Script Lib -->
-    <!-- <script type="text/javascript"
-src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <!-- Moment.js Minimal Script Lib -->
-    <!-- <script type="text/javascript"
-src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
-    <!-- Moment.js Full Script Lib -->
-    <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
-  ></script>
-    <!-- jQuery Full Script Lib -->
     <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- Moment.js Minimal Script Lib -->
+      <!-- <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
+        <!-- Moment.js Script Lib -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <!-- jQuery Full Script Lib -->
+        <script
     src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <!-- jQuery UI Script Lib - want drag and drop -->
-    <script type="text/javascript"
+    <script
     src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Drag and Drop sort -->
     <script>
@@ -177,6 +164,9 @@ src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></sc
         $('#sortable').sortable();
         $('#sortable').disableSelection();
       });
-    </script>
+      </script>
+      <!-- My Script -->
+      <script
+      src="./Assets/script.js"></script>
   </body>
 </html>
