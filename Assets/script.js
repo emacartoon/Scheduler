@@ -8,11 +8,11 @@ $currentDay.textContent = date;
 // In case I want the seconds later for my last refresh
 console.log(moment().format("MMMM Do YYYY, HH:mm:ss"));
 
-// Define description class
-var description = document.getElementsByClassName(".description");
+// // Define description class
+// var description = document.getElementsByClassName(".description");
 
-// Define $timeBlock
-var $timeBlock = document.getElementsByClassName(".time-block");
+// // Define $timeBlock
+// var $timeBlock = document.getElementsByClassName(".time-block");
 
 // Save button -> Store the Time + Description in localStorage
 $(".saveBtn").on("click", function (e) {
@@ -66,5 +66,5 @@ function whatTimeIsIt() {
     }
   });
 }
-// Make the function happens
+// Make the function happen
 whatTimeIsIt();
