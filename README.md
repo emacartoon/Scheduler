@@ -27,10 +27,13 @@ WHEN I refresh the page
 [x] THEN the saved events persist
 
 ## Mockups & Screen Shots
-![./Assets/imgs/Mockup_Styles.png]
+![Mockup with styles selected](./Assets/imgs/Mockup_Styles.png)
 Mockup with styles selected
 
-![./Assets/imgs/Function_Screenshot.png]
+![Screenshot of working function at 8:45Am](./Assets/imgs/Function_ScreenshotAM.png)
+Screenshot of working function at 8:54pm
+
+![Screenshot of working function at 8:54pm](./Assets/imgs/Function_Screenshot.png)
 Screenshot of working function at 8:54pm
 
 ## Sources
