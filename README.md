@@ -30,7 +30,7 @@ WHEN I refresh the page
 ![Mockup with styles selected](./Assets/imgs/Mockup_Styles.png)
 Mockup with styles selected
 
-![Screenshot of working function at 8:45Am](./Assets/imgs/Function_ScreenshotAM.png)
+![Screenshot of working function at 8:40am](./Assets/imgs/Function_Screenshot_AM.png)
 Screenshot of working function at 8:54pm
 
 ![Screenshot of working function at 8:54pm](./Assets/imgs/Function_Screenshot.png)
